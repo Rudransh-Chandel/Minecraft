@@ -114,3 +114,43 @@ if(keyPressed=='67')
     new_image('cloud.jpg');
 }
 }
+
+function up()
+{
+    if(playerY>=0)
+    {
+        playerY = playerY - blockImage_Height;
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function down()
+{
+    if(playerY<=550)
+    {
+        playerY = playerY + blockImage_Height;
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function right()
+{
+    if(playerX<=950)
+    {
+        playerX = playerX + blockImage_Width;
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left()
+{
+    if(playerX>=0)
+    {
+        playerX = playerX - blockImage_Width;
+        canvas.remove(player_object);
+        player_update();
+    }
+}
